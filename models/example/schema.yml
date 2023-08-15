@@ -1,0 +1,9 @@
+
+version: 2
+
+models:
+  - name: hello_world
+    description: "A hello world dbt model"
+    columns:
+      - name: field
+        description: "A test column name"
