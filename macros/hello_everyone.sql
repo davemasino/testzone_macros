@@ -6,6 +6,12 @@ materialized = 'table'
 }}
 SELECT
 {% for name in names -%}
-'Hello {{name}}' AS greeting_{{name}},
+    {% set first = True -%}
+    {% if first -%}
+        'Hello {{name}}' AS greeting_{{name}}
+        {% set first = False -%}
+    {% else -%}
+        ,'Hello {{name}}' AS greeting_{{name}}
+    {% end if -%}
 {%- endfor %}
 {%- endmacro %}
