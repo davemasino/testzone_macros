@@ -12,6 +12,6 @@ SELECT
         {% set first = False -%}
     {% else -%}
         ,'Hello {{name}}' AS greeting_{{name}}
-    {% end if -%}
+    {% endif -%}
 {%- endfor %}
 {%- endmacro %}
